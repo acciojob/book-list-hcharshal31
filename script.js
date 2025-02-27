@@ -1,6 +1,5 @@
-//your JS code here. If required.
 let submitBtn = document.getElementById("submit");
-let table = document.getElementsByClassName("table")[0];
+let bookList = document.getElementById("book-list");
 
 submitBtn.onclick = (ev)=>{
   ev.preventDefault();
@@ -10,7 +9,7 @@ submitBtn.onclick = (ev)=>{
   let isbn = document.getElementById("isbn").value;
 
   if(title && author && isbn){
-    table.innerHTML += `
+    bookList.innerHTML += `
       <tr>
         <td>${title}</td>
         <td>${author}</td>
@@ -28,8 +27,8 @@ submitBtn.onclick = (ev)=>{
   document.getElementById("isbn").value = "";
 }
 
-document.getElementById("book-list").onclick = (ev) => {
-	if(ev.target.classList.contains("delete")){
+  document.getElementById("book-list").onclick = (ev) => {
+    if(ev.target.classList.contains("delete")){
       ev.target.closest("tr").remove();
       console.log("Row is removed...");
     }
