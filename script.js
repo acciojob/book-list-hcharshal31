@@ -28,8 +28,8 @@ submitBtn.onclick = (ev)=>{
   document.getElementById("isbn").value = "";
 }
 
-  document.getElementById("book-list").onclick = (ev) => {
-    if(ev.target.classList.contains("delete")){
+document.getElementById("book-list").onclick = (ev) => {
+	if(ev.target.classList.contains("delete")){
       ev.target.closest("tr").remove();
       console.log("Row is removed...");
     }
