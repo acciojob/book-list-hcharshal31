@@ -28,7 +28,7 @@ submitBtn.onclick = (ev)=>{
   document.getElementById("isbn").value = "";
 }
 
-  document.getElementsByClassName("book-list")[0].onclick = (ev) => {
+  document.getElementById("book-list").onclick = (ev) => {
     if(ev.target.classList.contains("delete")){
       ev.target.closest("tr").remove();
       console.log("Row is removed...");
